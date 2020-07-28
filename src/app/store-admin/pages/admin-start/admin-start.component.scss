@@ -1,0 +1,15 @@
+.content {
+  display: grid;
+  place-items: center;
+}
+
+.content h1 {
+  margin-top: 2rem;
+}
+
+.act_button button {
+  background-color: black;
+  color: whitesmoke;
+  opacity: 0.9;
+  height: 46px;
+}
