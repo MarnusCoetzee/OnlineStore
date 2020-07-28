@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "online-shop-435be": {
+      "hosting": {
+        "ShadesShop": [
+          "online-shop-435be"
+        ]
+      }
+    }
+  }
+}
