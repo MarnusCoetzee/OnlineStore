@@ -127,3 +127,11 @@ $accent: mat-palette($mat-myapp-accent);
 $theme: mat-light-theme($primary, $accent);
 
 @include angular-material-theme($theme);
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 0;
+}
+
+

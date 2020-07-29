@@ -7,8 +7,7 @@
     <mat-nav-list>
       <a mat-list-item routerLink="/" (click)="drawer.close()">Home</a>
       <a mat-list-item routerLink="/main-menu" (click)="drawer.close()">About Us</a>
-      <a mat-list-item routerLink="/" (click)="drawer.close()">Shop Sunglasses</a>
-      <a mat-list-item routerLink="/" (click)="drawer.close()">Shop Watches</a>
+      <a mat-list-item routerLink="/" (click)="drawer.close() && onClickNavigateProducts()">Shop Now</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -20,16 +19,21 @@
         mat-icon-button
         (click)="drawer.toggle()"
         *ngIf="isHandset$ | async">
-
-
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span class="fill-space"></span>
+      <div *ngIf="(isHandset$ | async)">
+        <button style="color: whitesmoke;" mat-icon-button (click)="onClickNavigateCart()">
+          <mat-icon>shopping_cart</mat-icon>
+        </button>
+      </div>
       <div *ngIf="!(isHandset$ | async)">
         <a mat-button routerLink="/">Home</a>
         <a mat-button routerLink="/">About Us</a>
-        <a mat-button routerLink="/">Shop Sunglasses</a>
-        <a mat-button routerLink="/">Shop Watches</a>
+        <a mat-button (click)="onClickNavigateProducts()">Shop Now</a>
+        <button style="color: whitesmoke;" mat-icon-button (click)="onClickNavigateCart()">
+          <mat-icon>shopping_cart</mat-icon>
+        </button>
       </div>
 
     </mat-toolbar>

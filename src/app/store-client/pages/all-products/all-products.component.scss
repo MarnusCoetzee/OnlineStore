@@ -1,0 +1,129 @@
+.heading {
+  display: grid;
+  place-items: center;
+  margin-top: 2rem;
+}
+
+.heading h3 {
+  text-align: center;
+}
+
+.product_cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.product_cards mat-card {
+  margin: 1rem;
+  border-radius: 15px;
+  background-color:lightgray;
+}
+
+.card {
+  flex: 1;
+  min-width: 50%;
+}
+
+.stockp p {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: -0.75rem;
+}
+
+.product_cards mat-card:hover {
+  transform: scale(1.05);
+}
+.product_cards mat-card-title {
+  text-align: center;
+}
+.product_cards mat-card-subtitle {
+  text-align: center;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+.card_img {
+  display: grid;
+  place-items: center;
+}
+.card_img img {
+  border-radius: 25px;
+  height: 16rem;
+  width: 16rem;
+}
+
+.but_container {
+  display: grid;
+  place-items: center;
+}
+
+.button {
+  display: inline-flex;
+  height: 40px;
+  width: 150px;
+  border: 2px solid black;
+  margin: 20px 20px 20px 20px;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: .8em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+/* Fifth Button */
+
+#button-5 {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#button-5 a {
+  position: relative;
+  transition: all .45s ease-Out;
+}
+
+#translate {
+  transform: rotate(50deg);
+  width: 100%;
+  height: 250%;
+  left: -200px;
+  top: -30px;
+  background: darkgray;
+  position: absolute;
+  transition: all .3s ease-Out;
+}
+
+#button-5:hover #translate {
+  left: 0;
+}
+
+#button-5:hover a {
+  color: #2D3142;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 700px) {
+  .product_cards {
+    display: flex;
+    flex-direction: column;
+  }
+  hr {
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+  .heading h3 {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}

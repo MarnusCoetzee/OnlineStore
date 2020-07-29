@@ -1,0 +1,48 @@
+<div class="container">
+
+  <div *ngIf="isLoading">
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <div *ngIf="!isLoading">
+
+    <div class="heading">
+      <h1>{{ title }}</h1>
+      <h3>{{ description }}</h3>
+    </div>
+
+    <hr>
+
+    <div class="product_cards">
+
+      <div class="card" *ngFor="let product of products">
+
+        <mat-card>
+          <mat-card-title>{{ product?.title }}</mat-card-title>
+          <mat-card-subtitle>{{ product?.description }}</mat-card-subtitle>
+          <div class="card_img">
+            <img src="{{ product?.imgUrl }}">
+          </div>
+          <div *ngIf="product.inStock" class="stockp">
+            <p>In Stock: {{ product?.stockCount }} left</p>
+          </div>
+          <div *ngIf="!product.inStock" class="stockp">
+            <p>Out Of Stock</p>
+          </div>
+          <div *ngIf="product.inStock" class="stockp">
+            <div class="but_container">
+              <div class="button" id="button-5">
+                <div id="translate"></div>
+                <a>Add To Cart</a>
+              </div>
+            </div>
+          </div>
+        </mat-card>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

@@ -5,7 +5,8 @@ import { LandingPageComponent } from './pages/landing-page/landing-page.componen
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
   { path: 'store-admin', loadChildren: () => import('./store-admin/store-admin.module').then(m => m.StoreAdminModule) },
-  { path: 'store-client', loadChildren: () => import('./store-client/store-client.module').then(m => m.StoreClientModule) }
+  { path: 'store-client', loadChildren: () => import('./store-client/store-client.module').then(m => m.StoreClientModule) },
+  { path: 'cart', loadChildren: () => import('./cart/cart.module').then(m => m.CartModule) }
 ];
 
 @NgModule({
