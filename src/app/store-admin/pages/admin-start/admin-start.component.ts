@@ -31,7 +31,7 @@ export class AdminStartComponent implements OnInit {
     this.authSubscription = this.afAuth.authState.subscribe((authResult) => {
       if (authResult) {
         if (authResult.uid === this.adminID) {
-          console.log('The Admin Is Authenticated!');
+          console.log(this.adminID);
           this.isAuth = true;
         } else {
           this.isAuth = false;
@@ -46,6 +46,10 @@ export class AdminStartComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.minLength(6), Validators.required]]
     });
+  }
+
+  onClickNavigateDashboard() {
+    this.router.navigate(['store-admin/dashboard']);
   }
 
   async onClickLogin() {

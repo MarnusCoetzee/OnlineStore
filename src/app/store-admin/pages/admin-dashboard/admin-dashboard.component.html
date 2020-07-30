@@ -1,1 +1,27 @@
-<p>admin-dashboard works!</p>
+<!-- Side navigation -->
+<div class="sidenav">
+  <a (click)="onClickShowHome()">Home</a>
+  <a (click)="onClickShowProducts()">Products</a>
+  <a (click)="onClickShowClients()">Clients</a>
+</div>
+
+<!-- Page content -->
+<div class="main">
+
+  <div class="dash_content">
+
+    <div *ngIf="showHome">
+      <app-admin-home></app-admin-home>
+    </div>
+
+    <div *ngIf="showProducts">
+      <app-products></app-products>
+    </div>
+
+    <div *ngIf="showClients">
+      <app-clients></app-clients>
+    </div>
+
+  </div>
+
+</div>

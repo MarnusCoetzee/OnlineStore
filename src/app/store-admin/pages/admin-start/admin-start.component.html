@@ -12,7 +12,7 @@
 
       <div *ngIf="isAuth">
         <div class="act_button">
-          <button mat-raised-button>Proceed To Admin Dashboard</button>
+          <button mat-raised-button (click)="onClickNavigateDashboard()">Proceed To Admin Dashboard</button>
         </div>
       </div>
       <div *ngIf="!isAuth">
