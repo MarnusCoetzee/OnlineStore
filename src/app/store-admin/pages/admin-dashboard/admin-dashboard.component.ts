@@ -23,6 +23,7 @@ export class AdminDashboardComponent implements OnInit {
   showHome = true;
   showProducts = false;
   showClients = false;
+  showOrders = false;
 
   constructor(
     private afAuth: AngularFireAuth,
@@ -45,18 +46,32 @@ export class AdminDashboardComponent implements OnInit {
     this.showHome = true;
     this.showProducts = false;
     this.showClients = false;
+    this.showOrders = false;
   }
 
   onClickShowProducts() {
     this.showHome = false;
     this.showProducts = true;
     this.showClients = false;
+    this.showOrders = false;
   }
 
   onClickShowClients() {
     this.showHome = false;
     this.showProducts = false;
     this.showClients = true;
+    this.showOrders = false;
+  }
+
+  onClickShowOrders() {
+    this.showHome = false;
+    this.showProducts = false;
+    this.showClients = false;
+    this.showOrders = true;
+  }
+
+  onClickLogout() {
+    this.afAuth.signOut().then(() => this.router.navigate(['']));
   }
 
 }

@@ -1,8 +1,14 @@
 <!-- Side navigation -->
 <div class="sidenav">
   <a (click)="onClickShowHome()">Home</a>
+  <hr>
   <a (click)="onClickShowProducts()">Products</a>
+  <hr>
+  <a (click)="onClickShowOrders()">Orders</a>
+  <hr>
   <a (click)="onClickShowClients()">Clients</a>
+  <hr>
+  <a (click)="onClickLogout()">Logout</a>
 </div>
 
 <!-- Page content -->
@@ -20,6 +26,10 @@
 
     <div *ngIf="showClients">
       <app-clients></app-clients>
+    </div>
+
+    <div *ngIf="showOrders">
+      <app-orders></app-orders>
     </div>
 
   </div>

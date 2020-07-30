@@ -10,10 +10,15 @@ import { AdminDashboardComponent } from './pages/admin-dashboard/admin-dashboard
 import { ProductsComponent } from './products/products.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { ClientsComponent } from './clients/clients.component';
+import { InventoryComponent } from './products/inventory/inventory.component';
+import { AddProductComponent } from './products/add-product/add-product.component';
+import { RemoveProductComponent } from './products/remove-product/remove-product.component';
+import { EditProductComponent } from './products/edit-product/edit-product.component';
+import { OrdersComponent } from './orders/orders.component';
 
 
 @NgModule({
-  declarations: [StoreAdminComponent, AdminStartComponent, AdminDashboardComponent, ProductsComponent, AdminHomeComponent, ClientsComponent],
+  declarations: [StoreAdminComponent, AdminStartComponent, AdminDashboardComponent, ProductsComponent, AdminHomeComponent, ClientsComponent, InventoryComponent, AddProductComponent, RemoveProductComponent, EditProductComponent, OrdersComponent],
   imports: [
     CommonModule,
     StoreAdminRoutingModule,
