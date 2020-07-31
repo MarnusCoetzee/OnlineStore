@@ -1,1 +1,57 @@
-<p>inventory works!</p>
+<div class="content">
+
+  <div *ngIf="isLoading">
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <div *ngIf="!isLoading">
+
+    <div class="tabs">
+      <h1>Products</h1>
+      <mat-tab-group mat-align-tabs="center">
+        <mat-tab label="Watches">
+
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Image</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">In Stock</th>
+                <th scope="col">Available Stock</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let watch of watches; let i=index">
+                <th scope="row">{{ i + 1 }}</th>
+                <td>
+                  <img [src]="watch?.imgUrl" class="mr-2" style="width: 20px">
+                </td>
+                <td>{{ watch?.title }}</td>
+                <td>R{{ watch?.price }}</td>
+                <div *ngIf="watch?.inStock">
+                  <td>
+                    <mat-icon style="color: green;">checkmark</mat-icon>
+                  </td>
+                </div>
+                <div *ngIf="!watch?.inStock">
+                  <td>
+                    <mat-icon style="color: red;">close</mat-icon>
+                  </td>
+                </div>
+                <td>{{ watch?.stockCount }}</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </mat-tab>
+        <mat-tab label="Sunglasses">
+
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+
+  </div>
+
+</div>

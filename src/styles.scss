@@ -1,5 +1,8 @@
 @import '~@angular/material/theming';
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
@@ -133,5 +136,6 @@ $theme: mat-light-theme($primary, $accent);
 ::-webkit-scrollbar {
   width: 0;
 }
+
 
 

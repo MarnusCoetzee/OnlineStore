@@ -14,6 +14,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment.prod';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 firebase.initializeApp(environment.firebase);
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ firebase.initializeApp(environment.firebase);
     AngularFirestoreModule,
     AngularFireAuthModule,
     ReactiveFormsModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
